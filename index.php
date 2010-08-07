@@ -18,10 +18,15 @@ $cfg['services'][5]	=	array('name' => 'Telnet','port' => 23, 'description' => 'C
 		<title>PHP Server Status</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<style type="text/css" media="screen">@import "./style.css";</style>
+		<meta name="author" value="Lee Findlow <projects@leefindlow.com>">
+		<meta name="keywords" value="server,status,ping,server status,status checker,server checker">
+		<meta name="description" value="PHP Script to allow the checking of the status of a Server.">
 	</head>
 	<body>
 		<div class="wrapper">
 		<h1>PHP Server Status</h1>
+		<p>This script allows the checking of any given services on a network connected server. Enter a server's hostname below to see an example of this in action.</p>
+		<p>To download and see more information please see <a href="http://leefindlow.com/projects/server-status/">the project</a> page on <a href="http://leefindlow.com/">my website</a>.</p>
 		<h2>Host</h2>
 		<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="GET">
 		Host: <input type="text" name="host" value="<?php echo $cfg['host']; ?>">
