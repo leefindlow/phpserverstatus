@@ -4,6 +4,7 @@ html,body{
 	background-color:#ccc;
 	font-family:Arial,helvetica,sans-serif;
 }
+
 .wrapper{
 	width:770px;
 	margin:20px auto;
@@ -12,12 +13,19 @@ html,body{
 	border:1px solid #000;
 	padding:10px;
 }
+.footer{
+	width:770px;
+	margin:0 auto;
+	font-size:0.8em;
+}
 .resultstable td{
 	padding:10px;
 }
-.resultstable .description:hover{
-	background-color:#eee;
+.resultstable tr:hover .name,.resultstable tr:hover .description{
+	background-color:#ddd;
+	-webkit-transition:all 0.8s;
 }
+
 h1{margin:0;}
 table{border-collapse:collapse;}
 .bg-red{background-color:#F33;}
