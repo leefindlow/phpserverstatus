@@ -16,11 +16,10 @@ class	ServerStatus{
 	//Something here
 	public	function	__construct(){
 		$this->advancedCheckPorts	=	array('80','8080');
-		$this->timeout	=	0;
+		$this->timeout	=	0.5;
 	}
 	/**
 	 *	Main method which is used to check a server, usage is simple with examples below:
-	 *
 	 *
 	 *	@param	mixed	$server			Hostname or IP address of the server to be checked.
 	 *	@param	int		$port			Port number which should be checked on the given server.
@@ -35,42 +34,21 @@ class	ServerStatus{
 		}
 	}
 
-	protected	function	checkServer($hostname = '127.0.0.1', $port = 80){
+	public	function	checkServer($hostname = '127.0.0.1', $port = 80){
 		$fp	=	@fsockopen($hostname, $port, $errno, $errstr, $this->timeout);
 		if($errno == 0){
-			return	true;
 			fclose($fp);
+			return	true;
 		}
 		return	false;
 	}
 
-	protected	function	checkServerAdvanced($hostname = '127.0.0.1', $port = 80){
+	public	function	checkServerAdvanced($hostname = '127.0.0.1', $port = 80){
 		$fp	=	@fsockopen($hostname, $port, $errno, $errstr, $this->timeout);
 		if($errno == 0){
 			if(in_array($port, $this->advancedCheckPorts)){
 				//Perform advanced checks
 				switch($port){
-					//FTP
-					case 20:
-					case 21:
-						return	true;
-						break;
-					//SSH
-					case 22:
-						return	true;
-						break;
-					//Telnet
-					case 23:
-						return true;
-						break;
-					//SMTP
-					case 35:
-						return	true;
-						break;
-					//WHOIS
-					case 43:
-						return	true;
-						break;
 					//HTTP
 					case 80:
 					case 8080:
@@ -80,14 +58,8 @@ class	ServerStatus{
 						if($statusCode < 400)
 							return	true;
 						break;
-					//POP
-					case 110:
-						return	true;
-						break;
-					//IMAP
-					case 143:
-						return	true;
-						break;
+					default:
+						return false;
 				}
 			}else{
 				return	true;
