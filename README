@@ -1,3 +1,3 @@
-*License
-*Usage
-*Website
+=== What is it? ===
+
+PHP Server Status is a simple class which allows the checking of the status of a service on a given server.
