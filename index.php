@@ -1,4 +1,9 @@
 <?php
+/**
+ * Example code for PHP Server Status
+ * @author  Lee Findlow <hello@leefindlow.com>
+ */
+
 //Include Class
 include('./ServerStatus.class.php');
 	//Initialise Class
