@@ -76,7 +76,7 @@ $cfg['services'][5]	=	array('name' => 'Telnet','port' => 23, 'description' => 'C
 		</div>
 		<div class="footer">
 			<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
-			<p>Script by <a href="http://leefindlow.com/">Lee Findlow</a>, <a href="http://leefindlow.com/projects/server-status/">more information</a>.</p>
+			<p>Script by <a href="http://www.leefindlow.com/">Lee Findlow</a>, <a href="http://www.leefindlow.com/projects/server-status/">more information</a>.</p>
 		</div>
 	</body>
 </html>
