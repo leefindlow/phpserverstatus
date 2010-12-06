@@ -42,7 +42,7 @@ $cfg['services'][5]	=	array('name' => 'Telnet','port' => 23, 'description' => 'C
 		<div class="wrapper">
 		<h1>PHP Server Status</h1>
 		<p>This script allows the checking of any given services on a network connected server. Enter a server's hostname below to see an example of this in action.</p>
-		<p>To download and see more information please see <a href="http://leefindlow.com/projects/server-status/">the project</a> page on <a href="http://leefindlow.com/">my website</a>.</p>
+        <p>To download and see more information please see <a href="http://www.leefindlow.com/projects/server-status/">the project</a> page on <a href="http://www.leefindlow.com/">my website</a>.</p>
 		<h2>Host</h2>
 		<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="GET">
 		Host: <input type="text" name="host" value="<?php echo $cfg['host']; ?>">
